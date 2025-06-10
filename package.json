@@ -1,0 +1,27 @@
+{
+  "name": "express-typescript-example",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "build": "tsc && tsc-alias",
+    "serve": "node ./dist/server.js",
+    "dev": "npm run lint && npm run build && npm run serve",
+    "start": "npm run delete-build && npm run lint && npm run build && npm run serve",
+    "delete-build": "rm -rf dist",
+    "delete-files": "rm -f package-lock.json && rm -rf node_modules && rm -rf dist",
+    "npm-cache-clean": "npm cache clean --force",
+    "npm-install": "npm i"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@types/cors": "^2.8.13",
+    "@types/node": "^20.3.3",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.5.3",
+    "tsc-alias": "^1.8.10",
+    "tslib": "^2.6.3",
+    "typescript": "^5.1.6"
+  }
+}
